@@ -5,14 +5,24 @@ import category from './category'
 import post from './post'
 import customImage from './customImage'
 import siteInfo from './siteInfo'
+import page from './page'
+import homePage from './homePage'
+import navigation from './navigation'
+import gallery from './gallery'
+import internalLink from './internalLink'
 
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     post,
+    page,
+    homePage,
     category,
     siteInfo,
+    internalLink,
     blockContent,
-    customImage
+    customImage,
+    navigation,
+    gallery,
   ]),
 })

@@ -4,14 +4,14 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
+      name: 'name',
+      title: 'Name',
       type: 'string',
     },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'blockContent',
-    },
   ],
+  preview: {
+    select: {
+      title: 'name',
+    },
+  },
 }

@@ -8,6 +8,8 @@
  *    type: 'blockContent'
  *  }
  */
+import {FaPaperclip} from 'react-icons/fa'
+
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -40,7 +42,7 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'URL',
+            title: 'External Link',
             name: 'link',
             type: 'object',
             fields: [
@@ -50,6 +52,14 @@ export default {
                 type: 'url',
               },
             ],
+          },
+          {
+            name:'internalLink',
+            type: 'internalLink',
+            title: 'Internal Link',
+            blockEditor: {
+              icon: FaPaperclip
+            }
           },
         ],
       },

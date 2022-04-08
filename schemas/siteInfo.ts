@@ -16,6 +16,13 @@ export default {
       description: "Describe your blog for search engines and social media.",
     },
     {
+      name: "footer",
+      type: "text",
+      title: "Footer",
+      rows: 2,
+      description: "Text you want to appear at the bottom of each page.",
+    },
+    {
       name: "keywords",
       type: "array",
       title: "Keywords",
@@ -30,6 +37,12 @@ export default {
       type: "string",
       description: "Your name",
       title: "Author",
+    },
+    {
+      name: 'logo',
+      title: 'Logo',
+      description: "A an awesome logo for your awesome site.",
+      type: 'customImage',
     },
   ],
 };

@@ -19,7 +19,7 @@ export default {
       type: 'string',
       title: 'Caption',
       options: {
-        isHighlighted: true
+        isHighlighted: false
       }
     },
   ],
