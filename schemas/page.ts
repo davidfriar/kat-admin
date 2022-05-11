@@ -25,6 +25,23 @@ export default {
       description: 'This is optional'
     },
     {
+      name: 'pageType',
+      title: 'Page Type',
+      description: "What kind of page is this? A category page shows a list of posts, and you can choose to filter the list to only show posts from particular categories. A gallery list page shows a list of photo galleries. A simple page is just page.",
+      type: 'string',
+      validation: (rule:Rule) => rule.required().error("You need to choose a page type"),
+      options: {
+        list: [
+          { title: 'Category Page', value: 'categoryPage'},
+          { title: 'Gallery List Page', value: 'galleryListPage'},
+          { title: 'Simple Page', value: 'simplePage'},
+          { title: 'Portfolio Page', value: 'portfolioPage'},
+        ],
+        layout: 'radio'
+      },
+
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
@@ -33,6 +50,14 @@ export default {
       name: 'mainImage',
       title: 'Main Image',
       type: 'customImage',
+      hidden: ({document}) => document.pageType == 'portfolioPage',
+    },
+    {
+      name: 'photos',
+      title: 'Photos',
+      type: 'array',
+      of: [{type: 'customImage'}],
+      hidden: ({document}) => document.pageType != 'portfolioPage',
     },
     {
       name: 'slug',
@@ -44,22 +69,6 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-    },
-    {
-      name: 'pageType',
-      title: 'Page Type',
-      description: "What kind of page is this? A category page shows a list of posts, and you can choose to filter the list to only show posts from particular categories. A gallery list page shows a list of photo galleries. A simple page is just page.",
-      type: 'string',
-      validation: (rule:Rule) => rule.required().error("You need to choose a page type"),
-      options: {
-        list: [
-          { title: 'Category Page', value: 'categoryPage'},
-          { title: 'Gallery List Page', value: 'galleryListPage'},
-          { title: 'Simple Page', value: 'simplePage'},
-        ],
-        layout: 'radio'
-      },
-
     },
     {
       name: 'categories',
