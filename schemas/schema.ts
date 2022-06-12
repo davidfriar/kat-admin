@@ -10,6 +10,7 @@ import homePage from './homePage'
 import navigation from './navigation'
 import gallery from './gallery'
 import internalLink from './internalLink'
+import sticker from './sticker'
 
 export default createSchema({
   name: 'default',
@@ -24,5 +25,6 @@ export default createSchema({
     customImage,
     navigation,
     gallery,
+    sticker,
   ]),
 })

@@ -49,6 +49,11 @@ export default () =>
               .title('Categories')
               .child(
                 S.documentTypeList('category')
+              ),
+            S.listItem()
+              .title('Stickers')
+              .child(
+                S.documentTypeList('sticker')
               )
           ]
         )

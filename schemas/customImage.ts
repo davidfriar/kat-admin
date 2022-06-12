@@ -22,6 +22,12 @@ export default {
         isHighlighted: false
       }
     },
+    {
+      name: 'sticker',
+      title: 'Sticker',
+      type: 'reference',
+      to: {type: 'sticker'},
+    },
   ],
   options: {hotspot: true},
   sources: [
