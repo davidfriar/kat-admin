@@ -96,8 +96,7 @@ export default {
         list: [
           {title: 'Coverflow', value: 'coverflow'},
           {title: 'Card List', value: 'cardlist'},
-          {title: 'Grid', value: 'grid'},
-          {title: 'Gig', value: "gig" },
+          {title: 'Polaroids', value: 'polaroids' },
         ],
         layout: 'radio'
       }

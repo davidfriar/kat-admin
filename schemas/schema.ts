@@ -11,6 +11,8 @@ import navigation from './navigation'
 import gallery from './gallery'
 import internalLink from './internalLink'
 import sticker from './sticker'
+import tiktok from './tiktok'
+import playlist from './playlist'
 
 export default createSchema({
   name: 'default',
@@ -26,5 +28,7 @@ export default createSchema({
     navigation,
     gallery,
     sticker,
+    tiktok,
+    playlist,
   ]),
 })

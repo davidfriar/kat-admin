@@ -70,5 +70,11 @@ export default {
     {
       type: 'customImage',
     },
+    {
+      type: 'tiktok',
+    },
+    {
+      type: 'playlist',
+    },
   ],
 }
