@@ -22,23 +22,28 @@ const Spotify = ({
   allow = 'encrypted-media',
   ...props
 }: SpotifyProps) => {
-  const url = new URL(link);
-  // https://open.spotify.com/track/1KFxcj3MZrpBGiGA8ZWriv?si=f024c3aa52294aa1
-  return (
-    <iframe
-      title="Spotify Web Player"
-      src={`https://open.spotify.com/embed${url.pathname}`}
-      width={width}
-      height={height}
-      frameBorder={frameBorder}
-      allow={allow}
-      style={{
-        borderRadius: 8,
-        ...style,
-      }}
-      {...props}
-    />
-  );
+  try {
+    const url = new URL(link);
+    // https://open.spotify.com/track/1KFxcj3MZrpBGiGA8ZWriv?si=f024c3aa52294aa1
+    return (
+      <iframe
+        title="Spotify Web Player"
+        src={`https://open.spotify.com/embed${url.pathname}`}
+        width={width}
+        height={height}
+        frameBorder={frameBorder}
+        allow={allow}
+        style={{
+          borderRadius: 8,
+          ...style,
+        }}
+        {...props}
+      />
+    );
+  }
+  catch(err){
+    return `Could not display playlist. Check the url: (${link})`
+  }
 };
 
 export default Spotify;
